@@ -7,11 +7,11 @@ export default Ember.Route.extend({
       actions: {
             sendSearch: function sendSearch() {
                   console.log('sendsearch clicked');
-                  var barsearch = this.get('barsearch');
+                  var barsearch = $('#bsear').val();
                   console.log(barsearch);
-                  var yelpReq = '/yelp';
+                  var yelpReq = '/yelp?' + barsearch;
                   var that = this;
-                  $.getJSON('/yelp', function (data) {
+                  $.getJSON(yelpReq, function (data) {
                         console.log(data);
                         data.forEach(function (val) {
                               that.modelFor('bar-list').pushObject(val);

@@ -141,7 +141,7 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         return morphs;
       },
       statements: [
-        ["inline","input",[],["type","text","value",["subexpr","@mut",[["get","barsearch",["loc",[null,[5,27],[5,36]]]]],[],[]]],["loc",[null,[5,1],[5,38]]]],
+        ["inline","input",[],["type","text","id","bsear","value",["subexpr","@mut",[["get","barsearch",["loc",[null,[5,37],[5,46]]]]],[],[]]],["loc",[null,[5,1],[5,48]]]],
         ["element","action",["sendSearch"],[],["loc",[null,[6,9],[6,33]]]],
         ["block","each",[["get","model",["loc",[null,[9,9],[9,14]]]]],[],0,null,["loc",[null,[9,1],[15,10]]]]
       ],

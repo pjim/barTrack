@@ -301,11 +301,11 @@ define('frontend/routes/bar-list', ['exports', 'ember'], function (exports, Embe
             actions: {
                   sendSearch: function sendSearch() {
                         console.log('sendsearch clicked');
-                        var barsearch = this.get('barsearch');
+                        var barsearch = $('#bsear').val();
                         console.log(barsearch);
-                        var yelpReq = '/yelp';
+                        var yelpReq = '/yelp?' + barsearch;
                         var that = this;
-                        $.getJSON('/yelp', function (data) {
+                        $.getJSON(yelpReq, function (data) {
                               console.log(data);
                               data.forEach(function (val) {
                                     that.modelFor('bar-list').pushObject(val);
@@ -529,7 +529,7 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         return morphs;
       },
       statements: [
-        ["inline","input",[],["type","text","value",["subexpr","@mut",[["get","barsearch",["loc",[null,[5,27],[5,36]]]]],[],[]]],["loc",[null,[5,1],[5,38]]]],
+        ["inline","input",[],["type","text","id","bsear","value",["subexpr","@mut",[["get","barsearch",["loc",[null,[5,37],[5,46]]]]],[],[]]],["loc",[null,[5,1],[5,48]]]],
         ["element","action",["sendSearch"],[],["loc",[null,[6,9],[6,33]]]],
         ["block","each",[["get","model",["loc",[null,[9,9],[9,14]]]]],[],0,null,["loc",[null,[9,1],[15,10]]]]
       ],
@@ -3422,7 +3422,7 @@ define('frontend/tests/routes/bar-list.jshint', function () {
 
   QUnit.module('JSHint - routes');
   QUnit.test('routes/bar-list.js should pass jshint', function(assert) { 
-    assert.ok(false, 'routes/bar-list.js should pass jshint.\nroutes/bar-list.js: line 12, col 38, Missing semicolon.\nroutes/bar-list.js: line 19, col 23, Missing semicolon.\nroutes/bar-list.js: line 14, col 17, \'$\' is not defined.\nroutes/bar-list.js: line 12, col 21, \'yelpReq\' is defined but never used.\n\n4 errors'); 
+    assert.ok(false, 'routes/bar-list.js should pass jshint.\nroutes/bar-list.js: line 19, col 23, Missing semicolon.\nroutes/bar-list.js: line 10, col 33, \'$\' is not defined.\nroutes/bar-list.js: line 14, col 17, \'$\' is not defined.\n\n3 errors'); 
   });
 
 });
