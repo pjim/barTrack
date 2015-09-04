@@ -399,7 +399,7 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
               "column": 1
             },
             "end": {
-              "line": 13,
+              "line": 15,
               "column": 1
             }
           },
@@ -422,19 +422,32 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createTextNode("\n     ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("img");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n     ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("button");
+          var el2 = dom.createTextNode("add");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode(" //this will be fixed up later\n");
           dom.appendChild(el0, el1);
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(2);
+          var element0 = dom.childAt(fragment, [5]);
+          var morphs = new Array(3);
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]),0,0);
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]),0,0);
+          morphs[2] = dom.createAttrMorph(element0, 'src');
           return morphs;
         },
         statements: [
           ["content","result.name",["loc",[null,[11,5],[11,20]]]],
-          ["content","result.snippet_text",["loc",[null,[12,5],[12,28]]]]
+          ["content","result.snippet_text",["loc",[null,[12,5],[12,28]]]],
+          ["attribute","src",["concat",[["get","result.Image_url",["loc",[null,[13,17],[13,33]]]]]]]
         ],
         locals: ["result"],
         templates: []
@@ -450,7 +463,7 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 18,
             "column": 0
           }
         },
@@ -504,18 +517,18 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [2]);
-        var element1 = dom.childAt(element0, [5]);
+        var element1 = dom.childAt(fragment, [2]);
+        var element2 = dom.childAt(element1, [5]);
         var morphs = new Array(3);
-        morphs[0] = dom.createMorphAt(element0,3,3);
-        morphs[1] = dom.createElementMorph(element1);
+        morphs[0] = dom.createMorphAt(element1,3,3);
+        morphs[1] = dom.createElementMorph(element2);
         morphs[2] = dom.createMorphAt(dom.childAt(fragment, [4]),1,1);
         return morphs;
       },
       statements: [
         ["inline","input",[],["type","text"],["loc",[null,[5,1],[5,22]]]],
         ["element","action",["sendSearch"],[],["loc",[null,[6,9],[6,33]]]],
-        ["block","each",[["get","model",["loc",[null,[9,9],[9,14]]]]],[],0,null,["loc",[null,[9,1],[13,10]]]]
+        ["block","each",[["get","model",["loc",[null,[9,9],[9,14]]]]],[],0,null,["loc",[null,[9,1],[15,10]]]]
       ],
       locals: [],
       templates: [child0]
