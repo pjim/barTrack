@@ -9,6 +9,9 @@ define('frontend/routes/bar-list', ['exports', 'ember'], function (exports, Embe
             actions: {
                   sendSearch: function sendSearch() {
                         console.log('sendsearch clicked');
+                        var barsearch = this.get('barsearch');
+                        console.log(barsearch);
+                        var yelpReq = '/yelp';
                         var that = this;
                         $.getJSON('/yelp', function (data) {
                               console.log(data);

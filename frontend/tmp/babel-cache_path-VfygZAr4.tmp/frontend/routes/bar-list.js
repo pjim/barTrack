@@ -7,6 +7,9 @@ export default Ember.Route.extend({
       actions: {
             sendSearch: function sendSearch() {
                   console.log('sendsearch clicked');
+                  var barsearch = this.get('barsearch');
+                  console.log(barsearch);
+                  var yelpReq = '/yelp';
                   var that = this;
                   $.getJSON('/yelp', function (data) {
                         console.log(data);

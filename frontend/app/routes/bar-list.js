@@ -7,6 +7,9 @@ export default Ember.Route.extend({
 	actions:{
 		sendSearch:function(){
         		console.log('sendsearch clicked');
+                var barsearch = this.get('barsearch');
+                console.log(barsearch);
+                var yelpReq = '/yelp'
         		var that = this;
         		$.getJSON('/yelp',function(data){
         			console.log(data);
@@ -18,7 +21,7 @@ export default Ember.Route.extend({
         			//var yelpLocation = this.get('location')
         			//this.store.query('yelp',yelpLocation);
 
-        		});	
+        		});
 		}
     }
 });
