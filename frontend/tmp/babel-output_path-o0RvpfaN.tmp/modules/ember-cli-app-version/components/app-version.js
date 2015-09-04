@@ -1,7 +1,1 @@
-import Ember from 'ember';
-import layout from '../templates/app-version';
-
-export default Ember.Component.extend({
-  tagName: 'span',
-  layout: layout
-});
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-WPRZM6mq.tmp/modules/ember-cli-app-version/components/app-version.js

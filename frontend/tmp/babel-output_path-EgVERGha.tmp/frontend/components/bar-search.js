@@ -1,11 +1,1 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-
-  actions: {
-    sendSearch: function sendSearch() {
-      this.sendAction('action');
-    }
-  }
-});
-//
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VfygZAr4.tmp/frontend/components/bar-search.js

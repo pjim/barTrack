@@ -1,8 +1,1 @@
-export { isEqual };
-import Ember from 'ember';
-
-function isEqual(params) {
-  return params[0] === params[1];
-}
-
-export default Ember.Helper.helper(isEqual);
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VhmGRYKm.tmp/modules/ember-bootstrap/helpers/is-equal.js

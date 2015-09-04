@@ -1,4 +1,1 @@
-QUnit.module('JSHint - helpers');
-QUnit.test('helpers/resolver.js should pass jshint', function(assert) { 
-  assert.ok(true, 'helpers/resolver.js should pass jshint.'); 
-});
+/home/pjim/programming/BarApp/frontend/tmp/jshinter-cache_path-1C6rEzEi.tmp/helpers/resolver.jshint.js

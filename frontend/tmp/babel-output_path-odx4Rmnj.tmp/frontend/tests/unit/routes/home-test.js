@@ -1,11 +1,1 @@
-import { moduleFor, test } from 'ember-qunit';
-
-moduleFor('route:home', 'Unit | Route | home', {
-  // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
-});
-
-test('it exists', function (assert) {
-  var route = this.subject();
-  assert.ok(route);
-});
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-JkT0MzuC.tmp/frontend/tests/unit/routes/home-test.js

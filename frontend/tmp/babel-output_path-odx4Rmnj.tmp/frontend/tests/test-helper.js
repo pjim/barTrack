@@ -1,4 +1,1 @@
-import resolver from './helpers/resolver';
-import { setResolver } from 'ember-qunit';
-
-setResolver(resolver);
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-JkT0MzuC.tmp/frontend/tests/test-helper.js

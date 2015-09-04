@@ -1,4 +1,1 @@
-import Ember from 'ember';
-import bsButtonGroup from 'ember-bootstrap/components/bs-button-group';
-
-export default bsButtonGroup;
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VfygZAr4.tmp/frontend/components/bs-button-group.js

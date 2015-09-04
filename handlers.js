@@ -10,21 +10,18 @@ var yelp =require('yelp').createClient({
 
 
 module.exports.yelp = function(req,res){
-			var yelpJson;
-            var queryS = req.query
-            
+	var yelpJson;
+    var queryS = req.query
 	var yelpPromise = new RSVP.Promise(function(resolve,rej){
-		 		yelp.search({term:'food',location:'london'}, function(error,data){
-		 				console.log(error);
-						console.log('call to yelp complete');
-						console.log(data.businesses);
-						yelpJson = data.businesses;
-						resolve();
-						res.json(yelpJson);
-						
+        yelp.search({term:'food',location:'london'}, function(error,data){
+        console.log(error);
+		console.log('call to yelp complete');
+        console.log(data.businesses);
+	    yelpJson = data.businesses;
+		resolve();
+        res.json(yelpJson);
 	    });
-	})
+	});
 
-	//yelpPromise.then(res.json(yelpJson));
-	
+
 }

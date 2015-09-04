@@ -1,4 +1,1 @@
-QUnit.module('JSHint - unit/routes');
-QUnit.test('unit/routes/bar-list-test.js should pass jshint', function(assert) { 
-  assert.ok(true, 'unit/routes/bar-list-test.js should pass jshint.'); 
-});
+/home/pjim/programming/BarApp/frontend/tmp/jshinter-cache_path-1C6rEzEi.tmp/unit/routes/bar-list-test.jshint.js

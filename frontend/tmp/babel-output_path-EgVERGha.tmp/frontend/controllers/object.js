@@ -1,2 +1,1 @@
-import Ember from 'ember';
-export default Ember.Controller;
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VfygZAr4.tmp/frontend/controllers/object.js

@@ -1,8 +1,1 @@
-export { isNot };
-import Ember from 'ember';
-
-function isNot(params /*, hash*/) {
-  return !params[0];
-}
-
-export default Ember.Helper.helper(isNot);
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VhmGRYKm.tmp/modules/ember-bootstrap/helpers/is-not.js

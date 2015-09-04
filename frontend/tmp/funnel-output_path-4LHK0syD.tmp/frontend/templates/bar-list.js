@@ -1,1 +1,1 @@
-/home/pjim/programming/BarApp/frontend/tmp/template_compiler-tmp_dest_dir-i6ShGeAI.tmp/frontend/templates/bar-list.js
+/home/pjim/programming/BarApp/frontend/tmp/template_compiler-tmp_dest_dir-fj3Hxz48.tmp/frontend/templates/bar-list.js

@@ -1,18 +1,1 @@
-
-
-export default initializerFactory;
-import Ember from 'ember';
-
-var classify = Ember.String.classify;
-
-function initializerFactory(name, version) {
-  var registered = false;
-
-  return function () {
-    if (!registered && name && version) {
-      var appName = classify(name);
-      Ember.libraries.register(appName, version);
-      registered = true;
-    }
-  };
-}
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-WPRZM6mq.tmp/modules/ember-cli-app-version/initializer-factory.js

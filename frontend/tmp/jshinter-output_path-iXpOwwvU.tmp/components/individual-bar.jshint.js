@@ -1,4 +1,1 @@
-QUnit.module('JSHint - components');
-QUnit.test('components/individual-bar.js should pass jshint', function(assert) { 
-  assert.ok(true, 'components/individual-bar.js should pass jshint.'); 
-});
+/home/pjim/programming/BarApp/frontend/tmp/jshinter-cache_path-Bw1fSUlm.tmp/components/individual-bar.jshint.js

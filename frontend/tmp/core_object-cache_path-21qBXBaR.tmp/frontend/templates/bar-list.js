@@ -49,7 +49,7 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         },
         statements: [
           ["content","result.name",["loc",[null,[11,5],[11,20]]]],
-          ["content","result.text",["loc",[null,[12,5],[12,20]]]]
+          ["content","result.snippet_text",["loc",[null,[12,5],[12,28]]]]
         ],
         locals: ["result"],
         templates: []
@@ -65,8 +65,8 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 15,
-            "column": 6
+            "line": 16,
+            "column": 0
           }
         },
         "moduleName": "frontend/templates/bar-list.hbs"
@@ -113,6 +113,8 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },

@@ -1,7 +1,1 @@
-import Ember from 'ember';
-
-export default Ember.Route.extend({
-	beforeModel: function beforeModel() {
-		this.transitionTo('bar-list');
-	}
-});
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VfygZAr4.tmp/frontend/routes/application.js

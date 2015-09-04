@@ -1,4 +1,1 @@
-import Ember from 'ember';
-import component from 'ember-bootstrap/components/bs-dropdown-toggle';
-
-export default component;
+/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-VfygZAr4.tmp/frontend/components/bs-dropdown-toggle.js
