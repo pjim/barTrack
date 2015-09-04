@@ -8,6 +8,7 @@ credentials.js
 /frontend/dist
 /frontend/node_modules
 /frontend/bower_components
+/frontend/tmp
 # misc
 /.sass-cache
 /connect.lock
