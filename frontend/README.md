@@ -1,8 +1,6 @@
 # Frontend
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
+this is the ember frontend of the bar tracking app
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -15,8 +13,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone <repository-url>` main repository 
+* change into the new directory and repeat following for frontend directory
 * `npm install`
 * `bower install`
 
@@ -41,7 +39,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+site will be deployed on Heroku using ember heroku build pack
 
 ## Further Reading / Useful Links
 
