@@ -1,0 +1,1 @@
+/home/pjim/programming/BarApp/frontend/app/components/individual-bar.js

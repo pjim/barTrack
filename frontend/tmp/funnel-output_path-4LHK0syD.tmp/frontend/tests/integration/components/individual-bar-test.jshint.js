@@ -1,0 +1,1 @@
+/home/pjim/programming/BarApp/frontend/tmp/jshinter-output_path-nmGcGmwf.tmp/integration/components/individual-bar-test.jshint.js

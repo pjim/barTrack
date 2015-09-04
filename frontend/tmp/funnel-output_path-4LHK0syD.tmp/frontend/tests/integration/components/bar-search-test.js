@@ -1,0 +1,1 @@
+/home/pjim/programming/BarApp/frontend/tmp/babel-output_path-odx4Rmnj.tmp/frontend/tests/integration/components/bar-search-test.js

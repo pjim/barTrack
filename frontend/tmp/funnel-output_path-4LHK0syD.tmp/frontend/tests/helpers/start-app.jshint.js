@@ -1,0 +1,1 @@
+/home/pjim/programming/BarApp/frontend/tmp/jshinter-output_path-nmGcGmwf.tmp/helpers/start-app.jshint.js

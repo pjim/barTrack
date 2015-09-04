@@ -1,0 +1,15 @@
+<h2>this is the bar list route</h2>
+<div class="search">
+	
+    <p>please input your location</p>	
+	{{input type="text"}}
+	<button {{action "sendSearch" }}>search for bars!</button>
+</div>
+<div class="results">
+	{{#each model as |result|}}
+	
+	 <p>{{result.name}}</p>
+	 <p>{{result.text}}</p>
+	{{/each}}
+
+</div>

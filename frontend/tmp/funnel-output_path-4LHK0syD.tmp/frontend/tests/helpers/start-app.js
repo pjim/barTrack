@@ -1,0 +1,1 @@
+/home/pjim/programming/BarApp/frontend/tmp/babel-output_path-odx4Rmnj.tmp/frontend/tests/helpers/start-app.js
