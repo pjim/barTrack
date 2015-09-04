@@ -11,7 +11,7 @@ define('frontend/routes/bar-list', ['exports', 'ember'], function (exports, Embe
                         console.log('sendsearch clicked');
                         var barsearch = $('#bsear').val();
                         console.log(barsearch);
-                        var yelpReq = '/yelp?' + barsearch;
+                        var yelpReq = '/yelp?location=' + barsearch;
                         var that = this;
                         $.getJSON(yelpReq, function (data) {
                               console.log(data);

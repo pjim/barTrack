@@ -1,1 +1,4 @@
-/home/pjim/programming/BarApp/frontend/tmp/jshinter-cache_path-Bw1fSUlm.tmp/routes/bar-list.jshint.js
+QUnit.module('JSHint - routes');
+QUnit.test('routes/bar-list.js should pass jshint', function(assert) { 
+  assert.ok(false, 'routes/bar-list.js should pass jshint.\nroutes/bar-list.js: line 19, col 23, Missing semicolon.\nroutes/bar-list.js: line 10, col 33, \'$\' is not defined.\nroutes/bar-list.js: line 14, col 17, \'$\' is not defined.\n\n3 errors'); 
+});
