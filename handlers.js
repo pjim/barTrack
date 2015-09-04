@@ -14,7 +14,7 @@ module.exports.yelp = function(req,res){
     var queryS = req.query;
     console.log(queryS);
 	var yelpPromise = new RSVP.Promise(function(resolve,rej){
-        yelp.search({term:'food',location:queryS.location}, function(error,data){
+        yelp.search({term:'bar',location:queryS.location}, function(error,data){
         console.log(error);
 		console.log('call to yelp complete');
 	    yelpJson = data.businesses;

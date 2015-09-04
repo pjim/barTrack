@@ -11,9 +11,10 @@ export default Ember.Route.extend({
                 console.log(barsearch);
                 var yelpReq = '/yelp?location=' + barsearch;
         		var that = this;
+                that.refresh();
         		$.getJSON(yelpReq,function(data){
         			console.log(data);
-        			data.forEach(function(val){
+                            			data.forEach(function(val){
         				        			that.modelFor('bar-list').pushObject(val);
 
         			})

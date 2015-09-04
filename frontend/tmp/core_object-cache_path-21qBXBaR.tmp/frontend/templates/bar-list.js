@@ -97,7 +97,11 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","search");
-        var el2 = dom.createTextNode("\n	\n    ");
+        var el2 = dom.createTextNode("\n	");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment(" must add so enter works on input box  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n    ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("p");
         var el3 = dom.createTextNode("please input your location");
@@ -133,9 +137,9 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element1 = dom.childAt(fragment, [2]);
-        var element2 = dom.childAt(element1, [5]);
+        var element2 = dom.childAt(element1, [7]);
         var morphs = new Array(3);
-        morphs[0] = dom.createMorphAt(element1,3,3);
+        morphs[0] = dom.createMorphAt(element1,5,5);
         morphs[1] = dom.createElementMorph(element2);
         morphs[2] = dom.createMorphAt(dom.childAt(fragment, [4]),1,1);
         return morphs;

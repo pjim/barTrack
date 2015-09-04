@@ -292,31 +292,32 @@ define('frontend/routes/application', ['exports', 'ember'], function (exports, E
 });
 define('frontend/routes/bar-list', ['exports', 'ember'], function (exports, Ember) {
 
-      'use strict';
+        'use strict';
 
-      exports['default'] = Ember['default'].Route.extend({
-            model: function model() {
-                  return [];
-            },
-            actions: {
-                  sendSearch: function sendSearch() {
-                        console.log('sendsearch clicked');
-                        var barsearch = $('#bsear').val();
-                        console.log(barsearch);
-                        var yelpReq = '/yelp?location=' + barsearch;
-                        var that = this;
-                        $.getJSON(yelpReq, function (data) {
-                              console.log(data);
-                              data.forEach(function (val) {
-                                    that.modelFor('bar-list').pushObject(val);
-                              });
-                              //this to be fixed up for accessing with adapter to the server
-                              //var yelpLocation = this.get('location')
-                              //this.store.query('yelp',yelpLocation);
-                        });
-                  }
-            }
-      });
+        exports['default'] = Ember['default'].Route.extend({
+                model: function model() {
+                        return [];
+                },
+                actions: {
+                        sendSearch: function sendSearch() {
+                                console.log('sendsearch clicked');
+                                var barsearch = $('#bsear').val();
+                                console.log(barsearch);
+                                var yelpReq = '/yelp?location=' + barsearch;
+                                var that = this;
+                                that.refresh();
+                                $.getJSON(yelpReq, function (data) {
+                                        console.log(data);
+                                        data.forEach(function (val) {
+                                                that.modelFor('bar-list').pushObject(val);
+                                        });
+                                        //this to be fixed up for accessing with adapter to the server
+                                        //var yelpLocation = this.get('location')
+                                        //this.store.query('yelp',yelpLocation);
+                                });
+                        }
+                }
+        });
 
 });
 define('frontend/routes/home', ['exports', 'ember'], function (exports, Ember) {
@@ -485,7 +486,11 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","search");
-        var el2 = dom.createTextNode("\n	\n    ");
+        var el2 = dom.createTextNode("\n	");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment(" must add so enter works on input box  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n    ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("p");
         var el3 = dom.createTextNode("please input your location");
@@ -521,9 +526,9 @@ define('frontend/templates/bar-list', ['exports'], function (exports) {
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element1 = dom.childAt(fragment, [2]);
-        var element2 = dom.childAt(element1, [5]);
+        var element2 = dom.childAt(element1, [7]);
         var morphs = new Array(3);
-        morphs[0] = dom.createMorphAt(element1,3,3);
+        morphs[0] = dom.createMorphAt(element1,5,5);
         morphs[1] = dom.createElementMorph(element2);
         morphs[2] = dom.createMorphAt(dom.childAt(fragment, [4]),1,1);
         return morphs;
@@ -3422,7 +3427,7 @@ define('frontend/tests/routes/bar-list.jshint', function () {
 
   QUnit.module('JSHint - routes');
   QUnit.test('routes/bar-list.js should pass jshint', function(assert) { 
-    assert.ok(false, 'routes/bar-list.js should pass jshint.\nroutes/bar-list.js: line 19, col 23, Missing semicolon.\nroutes/bar-list.js: line 10, col 33, \'$\' is not defined.\nroutes/bar-list.js: line 14, col 17, \'$\' is not defined.\n\n3 errors'); 
+    assert.ok(false, 'routes/bar-list.js should pass jshint.\nroutes/bar-list.js: line 20, col 23, Missing semicolon.\nroutes/bar-list.js: line 10, col 33, \'$\' is not defined.\nroutes/bar-list.js: line 15, col 17, \'$\' is not defined.\n\n3 errors'); 
   });
 
 });
