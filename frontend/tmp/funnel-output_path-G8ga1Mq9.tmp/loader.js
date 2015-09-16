@@ -1,1 +1,0 @@
-/home/pjim/programming/BarApp/frontend/tmp/funnel-input_base_path-zZQv06BJ.tmp/0/

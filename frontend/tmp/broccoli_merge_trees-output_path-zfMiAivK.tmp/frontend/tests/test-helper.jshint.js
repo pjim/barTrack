@@ -1,1 +1,0 @@
-/home/pjim/programming/BarApp/frontend/tmp/jshinter-cache_path-1C6rEzEi.tmp/test-helper.jshint.js

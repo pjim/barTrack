@@ -1,1 +1,0 @@
-/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-JkT0MzuC.tmp/frontend/tests/integration/components/individual-bar-test.js

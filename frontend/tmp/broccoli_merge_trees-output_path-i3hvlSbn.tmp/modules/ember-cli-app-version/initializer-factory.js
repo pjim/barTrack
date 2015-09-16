@@ -1,1 +1,0 @@
-/home/pjim/programming/BarApp/frontend/tmp/babel-cache_path-WPRZM6mq.tmp/modules/ember-cli-app-version/initializer-factory.js

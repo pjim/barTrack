@@ -1,1 +1,0 @@
-/home/pjim/programming/BarApp/frontend/tmp/funnel-input_base_path-inZSEs3O.tmp/0/bower_components/ember-cli-test-loader/test-loader.js
