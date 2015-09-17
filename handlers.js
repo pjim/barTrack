@@ -1,6 +1,5 @@
 //var credentials = require('./credentials.js');
 var RSVP = require('rsvp');
-var Twitter = require('twitter');
 
 /*var yelp =require('yelp').createClient({
      consumer_key:credentials.oAuth.consumerKey,
