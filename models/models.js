@@ -14,9 +14,9 @@ var dbpassword = process.env.DBPASS;
 var connectString =   'mongodb://' + dbuser ':' + dbpassword + '@ds033097.mongolab.com:33097/bartrackbase'
 
 mongoose.connect(connectString);
-mongoose.model('User',UserSchema);
 
-exports.user = mongoose.model('User');
+exports.user = mongoose.model('User', UserSchema);
+
 
 
 
