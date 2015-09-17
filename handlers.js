@@ -15,7 +15,6 @@ var yelp =require('yelp').createClient({
      token_secret:process.env.TOKEN_SECRET
 });
 
-
 module.exports.yelp = function(req,res){
 	var yelpJson;
     var queryS = req.query;
