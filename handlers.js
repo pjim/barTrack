@@ -1,4 +1,4 @@
-var credentials = require('./credentials.js');
+//var credentials = require('./credentials.js');
 var RSVP = require('rsvp');
 var RSVP = require('rsvp');
 
