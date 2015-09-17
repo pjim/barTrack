@@ -2,8 +2,12 @@
   "name": "BarApp",
   "version": "1.0.0",
   "description": "bar tracking application",
-  "main": "app.js",
+  "main": "server.js",
+  "engines":{
+      "node":"5.0.0-pre"
+  },
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
