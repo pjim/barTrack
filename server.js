@@ -11,6 +11,6 @@ app.use('/',routes);
 
 
 module.exports = app;
-app.listen(port, function(){
+app.listen(process.env.port || 3000, function(){
 	console.log('express server started');
 });
