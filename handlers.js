@@ -1,7 +1,7 @@
 //var credentials = require('./credentials.js');
 var RSVP = require('rsvp');
 var passport = require('passport');
-var TwitterStrategy = require('passport-twitter');
+var TwitterStrategy = require('passport-twitter').Strategy;
 var User = require('./models/models.js').user;
 
 /*var yelp =require('yelp').createClient({
@@ -24,6 +24,7 @@ passport.use(new TwitterStrategy({
     callbackURL:'http://blooming-wildwood-2253.herokuapp.com'
 },
     function(token,tokenSecret,profile,cb){
+        console-log('twitterstrat fired');
         User.findOne({uid:profile.id}, function(err, user){
          if(user){
              console.log('twitter user fonud in db')
