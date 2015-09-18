@@ -40,8 +40,8 @@ passport.use(new TwitterStrategy({
                 done(null,user);
 
             });
-        })
-     }
+        }});
+    }
                                 ));
 
 module.exports.yelp = function(req,res){
