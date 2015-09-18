@@ -2,7 +2,7 @@
 var RSVP = require('rsvp');
 var passport = require('passport');
 var TwitterStrategy = require('passport-twitter');
-var User = require('./models/.models.js'),user;
+var User = require('./models/models.js').user;
 
 /*var yelp =require('yelp').createClient({
      consumer_key:credentials.oAuth.consumerKey,
