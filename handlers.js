@@ -21,13 +21,11 @@ var yelp =require('yelp').createClient({
 passport.use(new TwitterStrategy({
     consumerKey:process.env.TWITTER_CONSUMER_KEY,
     consumerSecret:process.env.TWITTER_CONSUMER_SECRET,
-    callbackURL:'http://blooming-wildwood-2253.herokuapp.com'
+    callbackURL:'http://blooming-wildwood-2253.herokuapp.com/'
 },
     function(token,tokenSecret,profile,cb){
-        console-log('twitterstrat fired');
         User.findOne({uid:profile.id}, function(err, user){
          if(user){
-             console.log('twitter user fonud in db')
             done(null,user);
         }else{
             var user = new User();
@@ -61,7 +59,6 @@ module.exports.yelp = function(req,res){
 }
 
 module.exports.twitter = function(){
-    console.log('twitter auth route activated');
     passport.authenticate('twitter');
 }
 
