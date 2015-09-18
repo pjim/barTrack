@@ -11,4 +11,6 @@ router.get('/', function  (req,res) {
 
 router.get('/yelp',handlers.yelp);
 
+router.get('/twitterAuth',handlers.twitter, function(req,res){});
+
 module.exports = router;

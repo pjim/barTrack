@@ -56,10 +56,8 @@ module.exports.yelp = function(req,res){
 	    });
 	});
 
-    module.exports.twitter = function(){
-         passport.authenticate('twitter');
-         function(req,res);
-    }
+    module.exports.twitter = passport.authenticate('twitter');
+
 
 
 
