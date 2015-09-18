@@ -26,6 +26,7 @@ passport.use(new TwitterStrategy({
     function(token,tokenSecret,profile,cb){
         User.findOne({uid:profile.id}, function(err, user){
          if(user){
+             console.log('twitter user fonud in db')
             done(null,user);
         }else{
             var user = new User();
@@ -34,6 +35,7 @@ passport.use(new TwitterStrategy({
             user.name = profile.displayName;
             user.image = profile._json.profile._image_url;
             user.save(function(err){
+                console.log('new twitter user save to our db');
                 if(err){throw err;}
                 done(null,user);
 
@@ -56,7 +58,9 @@ module.exports.yelp = function(req,res){
 	    });
 	});
 
-    module.exports.twitter = passport.authenticate('twitter');
+    module.exports.twitter = function(){
+       console.log('twitter auth route activated');
+        passport.authenticate('twitter');
 
 
 
