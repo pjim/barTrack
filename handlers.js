@@ -1,18 +1,46 @@
 //var credentials = require('./credentials.js');
 var RSVP = require('rsvp');
 var passport = require('passport');
+var TwitterStrategy = require('passport-twitter');
+var User = require('./models/.models.js'),user;
+
 /*var yelp =require('yelp').createClient({
      consumer_key:credentials.oAuth.consumerKey,
      consumer_secret:credentials.oAuth.consumerSecret,
      token:credentials.oAuth.token,
      token_secret:credentials.oAuth.tokenSecret
 });*/
+
 var yelp =require('yelp').createClient({
      consumer_key:process.env.CONSUMER_KEY,
      consumer_secret:process.env.CONSUMER_SECRET,
      token:process.env.TOKEN,
      token_secret:process.env.TOKEN_SECRET
 });
+
+passport.use(new TwitterStrategy({
+    consumerKey:process.env.TWITTER_CONSUMER_KEY,
+    consumerSecret:process.env.TWITTER_CONSUMER_SECRET,
+    callbackURL:'http://blooming-wildwood-2253.herokuapp.com'
+},
+    function(token,tokenSecret,profile,cb){
+        User.findOne({uid:profile.id}, function(err, user){
+         if(user){
+            done(null,user);
+        }else{
+            var user = new User();
+            user.provider = "twitter";
+            user.uid = profile.id;
+            user.name = profile.displayName;
+            user.image = profile._json.profile._image_url;
+            user.save(function(err){
+                if(err){throw err;}
+                done(null,user);
+
+            });
+        })
+     }
+                                ));
 
 module.exports.yelp = function(req,res){
 	var yelpJson;
