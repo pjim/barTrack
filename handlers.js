@@ -26,6 +26,7 @@ passport.use(new TwitterStrategy({
     function(token,tokenSecret,profile,cb){
         User.findOne({uid:profile.id}, function(err, user){
          if(user){
+             console-log('user found in db');
             done(null,user);
         }else{
             var user = new User();
