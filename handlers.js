@@ -57,12 +57,10 @@ module.exports.yelp = function(req,res){
         res.json(yelpJson);
 	    });
 	});
-
-    module.exports.twitter = function(){
-       console.log('twitter auth route activated');
-        passport.authenticate('twitter');
-
-
-
-
 }
+
+module.exports.twitter = function(){
+    console.log('twitter auth route activated');
+    passport.authenticate('twitter');
+}
+
